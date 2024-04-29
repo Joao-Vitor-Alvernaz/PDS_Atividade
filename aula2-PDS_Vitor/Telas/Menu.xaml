@@ -1,0 +1,177 @@
+﻿<Window x:Class="aula2_PDS_Vitor.Telas.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:aula2_PDS_Vitor.Telas"
+        mc:Ignorable="d"
+        Title="Menu" Height="900" Width="1600"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        WindowState="Maximized">
+    
+    <!--Grid principal-->
+    <Grid>
+        
+        <!--Definindo o tamanho das colunas-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="85*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <!--Definindo as cores das colunas-->
+        <Border Background="#DEB887" Grid.Column="0"/>
+        <Border Background="#F5DEB3" Grid.Column="1"/>
+        
+        <Frame Grid.Column="1" x:Name="framePage" NavigationUIVisibility="Hidden"/>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "*"/>
+                <RowDefinition Height = "*"/>
+                <RowDefinition Height = "*"/>
+                <RowDefinition Height = "*"/>
+                <RowDefinition Height = "*"/>
+                <RowDefinition Height = "*"/>
+            </Grid.RowDefinitions>
+        
+
+        <!--Empilhar os botões-->
+        
+        
+            
+            <!--Botão Escola-->
+            <Button
+                        FontSize="30"
+                        Grid.Column="0"
+                        Padding="6"
+                        Margin="0 0 2 5"
+                        Grid.Row="0" Click="Button_Click">
+
+                <StackPanel>
+                    <Image Source="/Resources/Imagens/escola_Icone.png"
+                           Width="40" Margin="15 0 15 0"/>
+                    <TextBlock Text="Escola" Margin="10 0 10 0"/>
+                </StackPanel>
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <!--Botão Curso-->
+            <Button
+                        FontSize="30"
+                        Grid.Column="0"
+                        Padding="6"
+                        Margin="0 0 2 5"
+                        Grid.Row="1" Click="Button_Click_1">
+
+                <StackPanel>
+                    <Image Source="/Resources/Imagens/curso_Icone.png"
+                           Width="40" Margin="15 0 15 0"/>
+                    <TextBlock Text="Cursos" Margin="10 0 10 0"/>
+                </StackPanel>
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <!--Botão Turma-->
+            <Button
+                        FontSize="30"
+                        Grid.Column="0"
+                        Padding="6"
+                        Margin="0 0 2 5"
+                        Grid.Row="2" Click="Button_Click_2">
+
+                <StackPanel>
+                    <Image Source="/Resources/Imagens/turma_Icone.png"
+                           Width="40" Margin="15 0 15 0"/>
+                    <TextBlock Text="Turma"/>
+                </StackPanel>
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            
+            <!--Botão Aluno-->
+            <Button
+                        FontSize="30"
+                        Grid.Column="0"
+                        Padding="6"
+                        Margin="0 0 2 5"
+                Grid.Row="3" Click="Button_Click_3">
+
+                <StackPanel>
+                    <Image Source="/Resources/Imagens/aluno_Icone.png"
+                           Width="40" Margin="25 0 25 0"/>
+                    <TextBlock Text="Aluno"/>
+                </StackPanel>
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <!--Botão Usuário-->
+            <Button
+                        FontSize="30"
+                        Grid.Column="0"
+                        Padding="6"
+                        Margin="0 0 2 5"
+                Grid.Row="4">
+
+                <StackPanel>
+                    <Image Source="/Resources/Imagens/34854.png"
+                           Width="60"/>
+                    <TextBlock Text="Usuário">
+                    </TextBlock>
+                </StackPanel>
+
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            
+            <!--Botão Sair-->
+                <Button
+                        FontSize="30"
+                        Grid.Column="0"
+                        Padding="6"
+                        Margin="0 0 2 5"
+                Grid.Row="5">
+
+                    <StackPanel>
+                        <Image Source="/Resources/Imagens/sair.png"
+                           Width="40" Margin="0 0 5 0"/>
+                        <TextBlock Text="Sair"/>
+                    </StackPanel>
+
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+        </Grid>
+
+    </Grid>
+
+</Window>
